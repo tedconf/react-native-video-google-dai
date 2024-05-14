@@ -1,7 +1,7 @@
 {
   "name": "react-native-google-ima",
   "title": "React Native Google IMA",
-  "version": "0.4.2",
+  "version": "0.5.1",
   "description": "Google IMA for React Native",
   "summary": "TODO",
   "main": "index.js",
@@ -26,7 +26,7 @@
   "peerDependencies": {
     "prop-types": "^15",
     "deprecated-react-native-prop-types": "^2.3.0",
-    "react-native-video": "https://github.com/tedconf/react-native-video.git#RCTVideoDelegate"
+    "react-native-video": "git+ssh://git@github.com:tedconf/react-native-video.git#RCTVideoDelegate-5.2.0-22Sep13_01_IOS14Fix_RN_0-70"
   },
   "devDependencies": {},
   "dependencies": {}

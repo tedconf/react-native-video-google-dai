@@ -1,8 +1,6 @@
 #import "RNGoogleIMA.h"
 #import "RNGoogleIMAConverters.m"
 #import "UIView+React.h"
-#import "IMAAdDisplayContainer.h"
-#import "IMAAVPlayerVideoDisplay.h"
 
 static NSString *const statusKeyPath = @"status";
 static NSString *const rctVideoNativeID = @"RNGoogleIMAPlayer";
@@ -150,8 +148,15 @@ NSDictionary* _imaSettings;
     if (rctVideo) {
         _rctVideo = rctVideo;
         _rctVideo.rctVideoDelegate = self;
-        // Create an ad display container for ad rendering.
-        _adDisplayContainer = [[IMAAdDisplayContainer alloc] initWithAdContainer:_adContainerView companionSlots:nil];
+        if (self.companionView) {
+            _adDisplayContainer = [[IMAAdDisplayContainer alloc] initWithAdContainer:_adContainerView
+                                                    viewController:self
+                                                    companionSlots:@[ self.companionSlot ]];
+        } else {
+            _adDisplayContainer = [[IMAAdDisplayContainer alloc] initWithAdContainer:_adContainerView
+                                                    viewController:self
+                                                    companionSlots:nil];
+        }
 
     }
 }
@@ -200,7 +205,7 @@ NSDictionary* _imaSettings;
             // if (!_contentPlayer) {
             [self invalidatePlayer];
 
-            _contentPlayer = [AVPlayer playerWithPlayerItem:nil];
+            _contentPlayer = [AVPlayer playerWithPlayerItem:_fallbackPlayerItem];
             [_contentPlayer pause];
             [_contentPlayer setRate:0];
 
@@ -240,14 +245,17 @@ NSDictionary* _imaSettings;
     IMAStreamRequest *request;
     if (_assetKey != nil) {
         // Live stream request.
+        request = [[IMALiveStreamRequest alloc] ];
         request = [[IMALiveStreamRequest alloc] initWithAssetKey:_assetKey
                                               adDisplayContainer:_adDisplayContainer
-                                                    videoDisplay:_avPlayerVideoDisplay];
+                                                    videoDisplay:_avPlayerVideoDisplay
+                                                     userContext:nil];
     } else {
         request = [[IMAVODStreamRequest alloc] initWithContentSourceID:_contentSourceID
                                                                videoID:_videoID
                                                     adDisplayContainer:_adDisplayContainer
-                                                          videoDisplay:_avPlayerVideoDisplay];
+                                                          videoDisplay:_avPlayerVideoDisplay
+                                                            userContext:nil];
     }
 
     [request setAdTagParameters:_adTagParameters];
