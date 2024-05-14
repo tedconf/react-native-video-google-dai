@@ -26,40 +26,6 @@
 
 /* Begin PBXFileReference section */
 		134814201AA4EA6300B7C361 /* libRNGoogleIMA.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNGoogleIMA.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		33E51A2E2BF3BEA2006CD259 /* IMAVideoDisplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMAVideoDisplay.h; sourceTree = "<group>"; };
-		33E51A2F2BF3BEA2006CD259 /* IMASettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMASettings.h; sourceTree = "<group>"; };
-		33E51A302BF3BEA2006CD259 /* IMALiveStreamRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMALiveStreamRequest.h; sourceTree = "<group>"; };
-		33E51A312BF3BEA2006CD259 /* IMASecureSignals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMASecureSignals.h; sourceTree = "<group>"; };
-		33E51A322BF3BEA2006CD259 /* IMAContentPlayhead.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMAContentPlayhead.h; sourceTree = "<group>"; };
-		33E51A332BF3BEA2006CD259 /* IMAPodVODStreamRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMAPodVODStreamRequest.h; sourceTree = "<group>"; };
-		33E51A342BF3BEA2006CD259 /* IMAAdPlaybackInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMAAdPlaybackInfo.h; sourceTree = "<group>"; };
-		33E51A352BF3BEA2006CD259 /* IMAAdDisplayContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMAAdDisplayContainer.h; sourceTree = "<group>"; };
-		33E51A362BF3BEA3006CD259 /* IMAAVPlayerContentPlayhead.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMAAVPlayerContentPlayhead.h; sourceTree = "<group>"; };
-		33E51A372BF3BEA3006CD259 /* IMACuepoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMACuepoint.h; sourceTree = "<group>"; };
-		33E51A382BF3BEA3006CD259 /* IMAAVPlayerVideoDisplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMAAVPlayerVideoDisplay.h; sourceTree = "<group>"; };
-		33E51A392BF3BEA3006CD259 /* IMASecureSignalsAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMASecureSignalsAdapter.h; sourceTree = "<group>"; };
-		33E51A3A2BF3BEA3006CD259 /* IMAAdsRenderingSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMAAdsRenderingSettings.h; sourceTree = "<group>"; };
-		33E51A3B2BF3BEA3006CD259 /* IMAAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMAAd.h; sourceTree = "<group>"; };
-		33E51A3C2BF3BEA3006CD259 /* IMAStreamManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMAStreamManager.h; sourceTree = "<group>"; };
-		33E51A3D2BF3BEA3006CD259 /* IMAUiElements.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMAUiElements.h; sourceTree = "<group>"; };
-		33E51A3E2BF3BEA3006CD259 /* IMAAdError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMAAdError.h; sourceTree = "<group>"; };
-		33E51A3F2BF3BEA3006CD259 /* IMAStreamRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMAStreamRequest.h; sourceTree = "<group>"; };
-		33E51A402BF3BEA3006CD259 /* IMAFriendlyObstruction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMAFriendlyObstruction.h; sourceTree = "<group>"; };
-		33E51A412BF3BEA3006CD259 /* IMAVODStreamRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMAVODStreamRequest.h; sourceTree = "<group>"; };
-		33E51A422BF3BEA3006CD259 /* IMAAdEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMAAdEvent.h; sourceTree = "<group>"; };
-		33E51A432BF3BEA3006CD259 /* IMAVideoStitcherLiveStreamRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMAVideoStitcherLiveStreamRequest.h; sourceTree = "<group>"; };
-		33E51A442BF3BEA3006CD259 /* IMACompanionAdSlot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMACompanionAdSlot.h; sourceTree = "<group>"; };
-		33E51A452BF3BEA3006CD259 /* IMAAdsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMAAdsManager.h; sourceTree = "<group>"; };
-		33E51A462BF3BEA3006CD259 /* IMAAdsRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMAAdsRequest.h; sourceTree = "<group>"; };
-		33E51A472BF3BEA3006CD259 /* IMAPictureInPictureProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMAPictureInPictureProxy.h; sourceTree = "<group>"; };
-		33E51A482BF3BEA3006CD259 /* IMAPodStreamRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMAPodStreamRequest.h; sourceTree = "<group>"; };
-		33E51A492BF3BEA3006CD259 /* IMACompanionAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMACompanionAd.h; sourceTree = "<group>"; };
-		33E51A4A2BF3BEA3006CD259 /* IMAAdPodInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMAAdPodInfo.h; sourceTree = "<group>"; };
-		33E51A4B2BF3BEA3006CD259 /* IMAVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMAVersion.h; sourceTree = "<group>"; };
-		33E51A4C2BF3BEA3006CD259 /* IMAAdsLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMAAdsLoader.h; sourceTree = "<group>"; };
-		33E51A4D2BF3BEA3006CD259 /* IMAVideoStitcherVODStreamRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMAVideoStitcherVODStreamRequest.h; sourceTree = "<group>"; };
-		33E51A4E2BF3BEA3006CD259 /* GoogleInteractiveMediaAds.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoogleInteractiveMediaAds.h; sourceTree = "<group>"; };
-		33E51A4F2BF3BEA3006CD259 /* IMAUniversalAdID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMAUniversalAdID.h; sourceTree = "<group>"; };
 		B14A91712321DC2A00F252FC /* RNGoogleIMAConverters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNGoogleIMAConverters.m; sourceTree = "<group>"; };
 		B14E759D2320093400E87672 /* RNGoogleIMA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNGoogleIMA.m; sourceTree = "<group>"; };
 		B14E759E2320093400E87672 /* RNGoogleIMA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNGoogleIMA.h; sourceTree = "<group>"; };
@@ -89,40 +55,6 @@
 		58B511D21A9E6C8500147676 = {
 			isa = PBXGroup;
 			children = (
-				33E51A4E2BF3BEA3006CD259 /* GoogleInteractiveMediaAds.h */,
-				33E51A3B2BF3BEA3006CD259 /* IMAAd.h */,
-				33E51A352BF3BEA2006CD259 /* IMAAdDisplayContainer.h */,
-				33E51A3E2BF3BEA3006CD259 /* IMAAdError.h */,
-				33E51A422BF3BEA3006CD259 /* IMAAdEvent.h */,
-				33E51A342BF3BEA2006CD259 /* IMAAdPlaybackInfo.h */,
-				33E51A4A2BF3BEA3006CD259 /* IMAAdPodInfo.h */,
-				33E51A4C2BF3BEA3006CD259 /* IMAAdsLoader.h */,
-				33E51A452BF3BEA3006CD259 /* IMAAdsManager.h */,
-				33E51A3A2BF3BEA3006CD259 /* IMAAdsRenderingSettings.h */,
-				33E51A462BF3BEA3006CD259 /* IMAAdsRequest.h */,
-				33E51A362BF3BEA3006CD259 /* IMAAVPlayerContentPlayhead.h */,
-				33E51A382BF3BEA3006CD259 /* IMAAVPlayerVideoDisplay.h */,
-				33E51A492BF3BEA3006CD259 /* IMACompanionAd.h */,
-				33E51A442BF3BEA3006CD259 /* IMACompanionAdSlot.h */,
-				33E51A322BF3BEA2006CD259 /* IMAContentPlayhead.h */,
-				33E51A372BF3BEA3006CD259 /* IMACuepoint.h */,
-				33E51A402BF3BEA3006CD259 /* IMAFriendlyObstruction.h */,
-				33E51A302BF3BEA2006CD259 /* IMALiveStreamRequest.h */,
-				33E51A472BF3BEA3006CD259 /* IMAPictureInPictureProxy.h */,
-				33E51A482BF3BEA3006CD259 /* IMAPodStreamRequest.h */,
-				33E51A332BF3BEA2006CD259 /* IMAPodVODStreamRequest.h */,
-				33E51A312BF3BEA2006CD259 /* IMASecureSignals.h */,
-				33E51A392BF3BEA3006CD259 /* IMASecureSignalsAdapter.h */,
-				33E51A2F2BF3BEA2006CD259 /* IMASettings.h */,
-				33E51A3C2BF3BEA3006CD259 /* IMAStreamManager.h */,
-				33E51A3F2BF3BEA3006CD259 /* IMAStreamRequest.h */,
-				33E51A3D2BF3BEA3006CD259 /* IMAUiElements.h */,
-				33E51A4F2BF3BEA3006CD259 /* IMAUniversalAdID.h */,
-				33E51A4B2BF3BEA3006CD259 /* IMAVersion.h */,
-				33E51A2E2BF3BEA2006CD259 /* IMAVideoDisplay.h */,
-				33E51A432BF3BEA3006CD259 /* IMAVideoStitcherLiveStreamRequest.h */,
-				33E51A4D2BF3BEA3006CD259 /* IMAVideoStitcherVODStreamRequest.h */,
-				33E51A412BF3BEA3006CD259 /* IMAVODStreamRequest.h */,
 				B14A91712321DC2A00F252FC /* RNGoogleIMAConverters.m */,
 				B14E75DF23202AE000E87672 /* RNGoogleIMAManager.h */,
 				B14E75E023202AE000E87672 /* RNGoogleIMAManager.m */,
