@@ -148,8 +148,15 @@ NSDictionary* _imaSettings;
     if (rctVideo) {
         _rctVideo = rctVideo;
         _rctVideo.rctVideoDelegate = self;
-        // Create an ad display container for ad rendering.
-        _adDisplayContainer = [[IMAAdDisplayContainer alloc] initWithAdContainer:_adContainerView companionSlots:nil];
+        if (_adContainerView) {
+            _adDisplayContainer = [[IMAAdDisplayContainer alloc] initWithAdContainer:_adContainerView
+                                                    viewController:self
+                                                    companionSlots:nil];
+        } else {
+            _adDisplayContainer = [[IMAAdDisplayContainer alloc] initWithAdContainer:_adContainerView
+                                                    viewController:self
+                                                    companionSlots:nil];
+        }
 
     }
 }
@@ -169,9 +176,7 @@ NSDictionary* _imaSettings;
         _streamManager = nil;
     }
     if (_avPlayerVideoDisplay != nil) {
-        if (_avPlayerVideoDisplay.player != nil) {
-            [_avPlayerVideoDisplay.player pause];
-        }
+        [_avPlayerVideoDisplay pause];
         _avPlayerVideoDisplay = nil;
     }
     if (_adsManager != nil) {
@@ -198,7 +203,7 @@ NSDictionary* _imaSettings;
             // if (!_contentPlayer) {
             [self invalidatePlayer];
 
-            _contentPlayer = [AVPlayer playerWithPlayerItem:nil];
+            _contentPlayer = [AVPlayer playerWithPlayerItem:_fallbackPlayerItem];
             [_contentPlayer pause];
             [_contentPlayer setRate:0];
 
@@ -240,12 +245,14 @@ NSDictionary* _imaSettings;
         // Live stream request.
         request = [[IMALiveStreamRequest alloc] initWithAssetKey:_assetKey
                                               adDisplayContainer:_adDisplayContainer
-                                                    videoDisplay:_avPlayerVideoDisplay];
+                                                    videoDisplay:_avPlayerVideoDisplay
+                                                     userContext:nil];
     } else {
         request = [[IMAVODStreamRequest alloc] initWithContentSourceID:_contentSourceID
                                                                videoID:_videoID
                                                     adDisplayContainer:_adDisplayContainer
-                                                          videoDisplay:_avPlayerVideoDisplay];
+                                                          videoDisplay:_avPlayerVideoDisplay
+                                                            userContext:nil];
     }
 
     [request setAdTagParameters:_adTagParameters];
@@ -378,8 +385,8 @@ NSDictionary* _imaSettings;
 
             [_contentPlayer pause];
             [_avPlayerVideoDisplay pause];
-            AVPlayer* player = _avPlayerVideoDisplay.player;
-            AVPlayerItem* playerItem = _avPlayerVideoDisplay.playerItem;
+            AVPlayer* player = _contentPlayer;
+            AVPlayerItem* playerItem = _fallbackPlayerItem;
             [_rctVideo setupPlayerItem:playerItem forSource:_source withPlayer:player];
             [_rctVideo observeValueForKeyPath:statusKeyPath ofObject:playerItem change:nil context:nil];
             break;
