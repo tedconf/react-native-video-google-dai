@@ -1,6 +1,8 @@
 #import "RNGoogleIMA.h"
 #import "RNGoogleIMAConverters.m"
 #import "UIView+React.h"
+#import "IMAAdDisplayContainer.h"
+#import "IMAAVPlayerVideoDisplay.h"
 
 static NSString *const statusKeyPath = @"status";
 static NSString *const rctVideoNativeID = @"RNGoogleIMAPlayer";
