@@ -148,10 +148,10 @@ NSDictionary* _imaSettings;
     if (rctVideo) {
         _rctVideo = rctVideo;
         _rctVideo.rctVideoDelegate = self;
-        if (self.companionView) {
+        if (_adContainerView) {
             _adDisplayContainer = [[IMAAdDisplayContainer alloc] initWithAdContainer:_adContainerView
                                                     viewController:self
-                                                    companionSlots:@[ self.companionSlot ]];
+                                                    companionSlots:nil];
         } else {
             _adDisplayContainer = [[IMAAdDisplayContainer alloc] initWithAdContainer:_adContainerView
                                                     viewController:self
@@ -176,9 +176,7 @@ NSDictionary* _imaSettings;
         _streamManager = nil;
     }
     if (_avPlayerVideoDisplay != nil) {
-        if (_avPlayerVideoDisplay.player != nil) {
-            [_avPlayerVideoDisplay.player pause];
-        }
+        [_avPlayerVideoDisplay pause];
         _avPlayerVideoDisplay = nil;
     }
     if (_adsManager != nil) {
@@ -245,7 +243,6 @@ NSDictionary* _imaSettings;
     IMAStreamRequest *request;
     if (_assetKey != nil) {
         // Live stream request.
-        request = [[IMALiveStreamRequest alloc] ];
         request = [[IMALiveStreamRequest alloc] initWithAssetKey:_assetKey
                                               adDisplayContainer:_adDisplayContainer
                                                     videoDisplay:_avPlayerVideoDisplay
@@ -388,8 +385,8 @@ NSDictionary* _imaSettings;
 
             [_contentPlayer pause];
             [_avPlayerVideoDisplay pause];
-            AVPlayer* player = _avPlayerVideoDisplay.player;
-            AVPlayerItem* playerItem = _avPlayerVideoDisplay.playerItem;
+            AVPlayer* player = _contentPlayer;
+            AVPlayerItem* playerItem = _fallbackPlayerItem;
             [_rctVideo setupPlayerItem:playerItem forSource:_source withPlayer:player];
             [_rctVideo observeValueForKeyPath:statusKeyPath ofObject:playerItem change:nil context:nil];
             break;
